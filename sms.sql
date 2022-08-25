@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 24, 2022 at 08:14 PM
+-- Generation Time: Aug 25, 2022 at 01:11 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -57,8 +57,8 @@ CREATE TABLE `classname` (
 --
 
 INSERT INTO `classname` (`Id`, `Class_Name`, `Class_Image`) VALUES
-(35, '12th Class', '240822165850230822155538new1.PNG'),
-(36, '11th ', '240822184104slide23.jpg');
+(38, 'BCA II', '250822162735new1.jfif'),
+(39, 'BCA I', '250822162751class1.jfif');
 
 -- --------------------------------------------------------
 
@@ -143,7 +143,7 @@ ALTER TABLE `adm_login`
 -- AUTO_INCREMENT for table `classname`
 --
 ALTER TABLE `classname`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `students`
