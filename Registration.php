@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) {
 
 ?>
 <section class="h-100 bg-dark">
-  <div class="container py-5 h-100">
+  <div class="container mb-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col">
         <div class="card card-registration my-4">
@@ -136,11 +136,15 @@ if (isset($_POST['submit'])) {
                       <input class="form-control-file" type="file" id="form3Example90" name="Profile_Picture" />
                     </div>
                   </div>
-                  <div class="d-flex justify-content-end ">
-                    <input type="submit" class="btn btn-primary ms-2" name="submit" value="Submit">
-                    <?php echo $msg ?>
+                  <div class="row">
+                  <div class="col-md-6 justify-content-end ">
+                    <input type="submit" class="btn btn-primary w-100" name="submit" value="Submit">
+                   
                   </div>
-
+                  <div class="col-md-6 justify-content-end "> 
+                    <?php echo "<b>".$msg."</b>" ?>
+                  </div>
+                  </div>
                 </div>
               </div>
             </form>
