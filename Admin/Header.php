@@ -43,7 +43,7 @@ if (!isset($_SESSION['USER_NAME']) ) {
                     <a class="nav-link" href="AddClass.php">Manage Class</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="AddClass.php">Manage Slider</a>
+                    <a class="nav-link" href="ManageSlider.php">Manage Slider</a>
                 </li>
                           
             </ul>

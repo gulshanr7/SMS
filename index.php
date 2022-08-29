@@ -1,6 +1,11 @@
 <?php
 
 include "header.php";
+
+
+
+
+
 ?>
 
 <!-- Slider Here -->
@@ -10,21 +15,65 @@ include "header.php";
             <div class="col-md-12">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class=""></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1" class=""></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2" class="active"></li>
+                    <?php
+              $sql = "Select * from slider where Slider_Status='1'";
+              $result = mysqli_query($conn, $sql);
+              
+              
+            if($count=mysqli_num_rows($result)>0){
+
+                $i=0;
+              while ($row = mysqli_fetch_array($result)) {
+             
+
+                       if($i==0)
+                       {
+                        echo ' <li data-target="#carouselExampleIndicators" data-slide-to="'.$i.'" class="active"></li>';
+                       }
+                  
+                        else{
+                            echo '<li data-target="#carouselExampleIndicators" data-slide-to="'.$i.'" class=""></li>';
+                        }
+                $i++;
+            }
+                } ?>
                     </ol>
 
                     <div class="carousel-inner">
+                       
+                        <?php
+              $sql = "Select * from slider where Slider_Status='1'";
+              $result = mysqli_query($conn, $sql);
+              
+              
+            if($count=mysqli_num_rows($result)>0){
+            $i=0;
+                while ($row = mysqli_fetch_array($result)) {
+
+                    if($i==0){
+                        echo ' 
                         <div class="carousel-item active">
-                            <img class="img-fluid w-100"  src="images/slide21.jpg" alt="First slide">
-                        </div>
+                        <img class="img-fluid w-100"  src="Slider_images/'.$row['Slider_Image'].'" alt="'.$row['Slider_ALT'].'">
+                        </div>  
+                        ';
+                    }
+                    else{
+                        echo ' 
                         <div class="carousel-item">
-                            <img class="img-fluid w-100"  src="images/slide22.jpg" alt="Second slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="img-fluid w-100"  src="images/slide23.jpg" alt="Third slide">
-                        </div>
+                        <img class="img-fluid w-100"  src="Slider_images/'.$row['Slider_Image'].'" alt="'.$row['Slider_ALT'].'">
+                        </div>  
+                        ';
+                    }
+                    $i++;    
+                }
+               
+
+            }
+                           ?>
+
+
+
+                                        
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -36,7 +85,7 @@ include "header.php";
                     </a>
                 </div>
             </div>
-
+        
         </div>
     </div>
 
